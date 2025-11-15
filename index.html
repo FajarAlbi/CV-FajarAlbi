@@ -1,221 +1,886 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fajar Albiansyah - Profil Lengkap</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #2575fc;
-      --secondary: #6a11cb;
-      --dark: #212529;
-      --light: #f8f9fa;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--light);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-weight: 700;
-      font-size: 2.8rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    .profile-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid rgba(255,255,255,0.3);
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      font-weight: 600;
-      margin-bottom: 40px;
-      color: var(--dark);
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: var(--primary);
-      margin: 10px auto;
-      border-radius: 2px;
-    }
-
-    .card {
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 20px;
-      border: none;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .skill-card h4 {
-      color: var(--primary);
-    }
-
-    .footer {
-      background-color: var(--dark);
-      color: white;
-      padding: 30px 0;
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .contact-item i {
-      width: 30px;
-      font-size: 1.2em;
-      color: var(--primary);
-    }
-
-    .about-text {
-      text-align: justify;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fajar Albiansyah | Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: #fff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #e2e8f0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img img:hover {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .personal-info {
+            margin: 25px 0;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .info-item i {
+            width: 30px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        /* Skills Section */
+        .skills {
+            background-color: #f1f5f9;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-list li i {
+            color: var(--success);
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Education Section */
+        .education {
+            background-color: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content .date {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid var(--primary);
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+        
+        .contact .section-title h2 {
+            color: white;
+        }
+        
+        .contact .section-title h2::after {
+            background: white;
+        }
+        
+        .contact p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-btn {
+            background: white;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .contact-btn:hover {
+            background: var(--light);
+            color: var(--secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background: var(--secondary);
+                width: 70%;
+                height: calc(100vh - 80px);
+                transition: 0.5s;
+                z-index: 999;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <img src="https://via.placeholder.com/180" alt="Fajar Albiansyah" class="profile-img" data-aos="zoom-in">
-      <h1 data-aos="fade-up">Fajar Albiansyah</h1>
-      <p class="lead" data-aos="fade-up" data-aos-delay="100">Programmer Pemula & Kreatif</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <div class="container my-5">
-    <h2 class="section-title" data-aos="fade-down">Tentang Saya</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card p-4 shadow-sm" data-aos="zoom-in">
-          <p class="about-text">
-            Saya adalah seorang pemula yang antusias dalam dunia teknologi dan pengembangan game. 
-            Saya percaya bahwa belajar dan beradaptasi adalah kunci utama dalam menghadapi perubahan zaman. 
-            Saya memiliki minat besar dalam membuat game sederhana menggunakan Scratch dan terus mengembangkan 
-            kemampuan dalam manajemen waktu serta adaptasi terhadap lingkungan baru.
-          </p>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>CV Fajar</span>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <!-- Profile Section -->
-  <div class="container my-5">
-    <h2 class="section-title" data-aos="fade-down">Data Diri</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card p-4 shadow-sm" data-aos="zoom-in">
-          <div class="contact-item">
-            <i class="fas fa-user"></i>
-            <span><strong>Nama:</strong> Fajar Albiansyah</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span><strong>Alamat:</strong> Wahana Harapan</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span><strong>No. Telp:</strong> 081770834484</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-gamepad"></i>
-            <span><strong>Hobi:</strong> Main Game</span>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Fajar Albiansyah</h1>
+            <p>Computer Technician & Web Developer | Specializing in Windows Installation & Website Development</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="#about" class="btn btn-outline">Learn More</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Skills Section -->
-  <div class="container my-5">
-    <h2 class="section-title" data-aos="fade-down">Keahlian Saya</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card p-4 skill-card" data-aos="flip-left">
-          <h4><i class="fas fa-hammer me-2 text-primary"></i>Hard Skill</h4>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-check-circle me-2 text-success"></i>Rakit Game "Scratch"</li>
-          </ul>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img animate">
+                    <img src="c:\Users\ENJOY COMPUTER\Pictures\file_00000000d6e061f7b535f39673bf9cf2.png" alt="Fajar Albiansyah">
+                </div>
+                <div class="about-text animate">
+                    <h3>Professional Profile</h3>
+                    <p>Hello! I'm Fajar Albiansyah, a skilled computer technician and web developer based in Bekasi. With expertise in Windows installation and website development, I provide reliable technical solutions for individuals and businesses.</p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div><strong>Name:</strong> Fajar Albiansyah</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><strong>Address:</strong> Wahana Harapan BLOCK E4/7 RT08 RW032, Tarumajaya District, Bekasi Regency</div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div><strong>Phone:</strong> <a href="tel:081770834484" style="color: var(--primary);">081770834484</a></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-draw-polygon"></i>
+                            <div><strong>Hobby:</strong> Drawing</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn">Get In Touch</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card p-4 skill-card" data-aos="flip-right">
-          <h4><i class="fas fa-brain me-2 text-success"></i>Soft Skill</h4>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-check-circle me-2 text-success"></i>Manajemen Waktu</li>
-            <li><i class="fas fa-check-circle me-2 text-success"></i>Adaptasi</li>
-          </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card animate">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Windows Installation & Configuration</li>
+                        <li><i class="fas fa-check-circle"></i> System Troubleshooting</li>
+                        <li><i class="fas fa-check-circle"></i> Hardware Maintenance</li>
+                        <li><i class="fas fa-check-circle"></i> Network Setup</li>
+                        <li><i class="fas fa-check-circle"></i> Website Development</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card animate">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Hard Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Windows Installation</li>
+                        <li><i class="fas fa-check-circle"></i> Website Development</li>
+                        <li><i class="fas fa-check-circle"></i> HTML/CSS</li>
+                        <li><i class="fas fa-check-circle"></i> JavaScript</li>
+                        <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card animate">
+                    <i class="fas fa-users"></i>
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check-circle"></i> Time Management</li>
+                        <li><i class="fas fa-check-circle"></i> Adaptability</li>
+                        <li><i class="fas fa-check-circle"></i> Communication</li>
+                        <li><i class="fas fa-check-circle"></i> Attention to Detail</li>
+                        <li><i class="fas fa-check-circle"></i> Teamwork</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Fajar Albiansyah. Hak Cipta Dilindungi.</p>
-    </div>
-  </footer>
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education & History</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <div class="date">2019 - 2022</div>
+                        <h3>SMK Galajuara</h3>
+                        <p>Computer and Network Engineering major. Gained foundational knowledge in computer hardware, networking, and basic programming concepts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <div class="date">2022 - Present</div>
+                        <h3>Freelance Technician</h3>
+                        <p>Providing Windows installation services and website development for local clients. Specialized in troubleshooting complex system issues.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <div class="date">2023</div>
+                        <h3>Web Development Projects</h3>
+                        <p>Completed multiple website development projects for local businesses, focusing on responsive design and user experience.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <div class="date">2024</div>
+                        <h3>Advanced Certification</h3>
+                        <p>Completed certification in Advanced Windows System Administration and Network Security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <p>Feel free to reach out if you need assistance with Windows installation, website development, or have any questions about my services.</p>
+            <a href="tel:081770834484" class="btn contact-btn">
+                <i class="fas fa-phone-alt"></i> Call Now: 081770834484
+            </a>
+        </div>
+    </section>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Fajar Albiansyah</h3>
+                    <p>Computer Technician & Web Developer specializing in Windows installation and website development. Committed to providing reliable technical solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Wahana Harapan BLOCK E4/7 RT08 RW032, Tarumajaya District, Bekasi Regency</p>
+                    <p><i class="fas fa-phone"></i> 081770834484</p>
+                    <p><i class="fas fa-envelope"></i> fajar@example.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fajar Albiansyah. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true
-    });
-  </script>
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const nav = document.querySelector('nav');
+        
+        mobileToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+        
+        // Scroll animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
